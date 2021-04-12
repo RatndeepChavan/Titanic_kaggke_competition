@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Titanic Survival Preciction by Ratndeep Chavan </title>
+        <style type="text/css">
+            label{
+            font-weight:bold;
+            width:150px;
+            display:inline-block;
+            margin-left:30%;
+            }
+            
+            select{
+            position:relative;
+            }
+            
+            button{
+            margin-left:30%;
+            border: 2px solid #000000;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition:1s;
+            border-radius:10px;
+            background:#A9A9A9;
+            }
+            
+        </style>
+    </head>
+    
+<body bgcolor=#A9A9A9>
+    <center>
+        <h1 style="color:white"> Titanic Survival Preciction </h1><br>
+        <img src = "static/Titanic1.jpg" width=50% height=25%> <br>
+        <h3> Input values.</h3> <br>
+    </center>
+
+    <div id="form">
+        <p>
+        deatails : features
+        
+        <form method="post">
+            <label>Name : {{val[0]}}</label>
+            <select name="Title"><br><br>
+                <option>Mr.</option>
+                <option>Mrs.</option>
+                <option>Miss</option>
+                <option>Unknown</option>
+            </select>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <br><br>
+            
+            <label>Fare : </label>
+            <input type="number"><br><br>
+            
+            <label>Travel Class : </label>
+            <select name="Class"><br><br>
+                <option>First</option>
+                <option>Second</option>
+                <option>Third</option>
+                <option>Unknown</option>
+            </select><br><br>
+            
+            <label>Age : </label>
+            <input type="number" max="100" min="0"><br><br>
+            
+            <label>Sex : </label>
+            <input type="radio" name="sex" checked> Male
+            <input type="radio" name="sex"> Female
+            <input type="radio" name="sex"> Unknown<br><br>
+            
+            <label>Siblings/Spouses : </label>
+            <input type="number" min="0"><br><br>
+            
+            <label>Parents/Childrens : </label> 
+            <input type="number" min="0"><br><br>
+            
+            <label>Embarked : </label>
+            <select name="Embarked">
+                <option>Cherbourg</option>
+                <option>Queenstown</option>
+                <option>Southampton</option>
+                <option>Unknown</option>
+            </select><br><br>
+            
+            
+            <button type="Submit"> Predict </button><br>
+            
+        </form>
+        <a href="sheet">
+        <button type="Submit"> Submit Excel Sheet </button><br><br>
+        </div>
+<br>
+<a href='/'>Reload</a>
+
+</center>
+    
+</body>    
+</html>
+
+    

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Titanic Survival Preciction by Ratndeep Chavan </title>
+        <style type="text/css">
+            label{
+            font-weight:bold;
+            width:150px;
+            display:inline-block;
+            margin-left:30%;
+            }
+            
+            select{
+            position:relative;
+            }
+            
+            button{
+            margin-left:30%;
+            border: 2px solid #000000;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            transition:1s;
+            border-radius:10px;
+            background:#696969;
+            }
+            
+        </style>
+    </head>
+    
+<body bgcolor=#A9A9A9>
+    <center>
+        <h1 style="color:white"> Titanic Survival Preciction </h1><br>
+        <img src = "static/Titanic.jpg" width=60% height=30%> <br>
+        <h3> Fill the below details to find out passenger survived or not.
+        <h4> (Fill the missing values with 'N/A' or '-1') </h4> </h3> <br>
+    </center>
+
+    <div id="form">
+        <form action="/predict" method="post">
+            <label>Name : </label>
+            <select name="Title"><br><br>
+                <option>Mr.</option>
+                <option>Mrs.</option>
+                <option>Miss</option>
+                <option>Unknown</option>
+            </select>
+            <input type="text" name="firstname" placeholder="First Name">
+            <input type="text" name="lastname" placeholder="Last Name">
+            <br><br>
+            
+            <label>Fare : </label>
+            <input type="number" name="fare"><br><br>
+            
+            <label>Travel Class : </label>
+            <select name="Class"><br><br>
+                <option>First</option>
+                <option>Second</option>
+                <option>Third</option>
+                <option>Unknown</option>
+            </select><br><br>
+            
+            <label>Age : </label>
+            <input type="number" name="age" max="100" min="0"><br><br>
+            
+            <label>Sex : </label>
+            <input type="radio" id="male" name="sex" value="male" checked> Male
+            <input type="radio" id="female" name="sex" value="female"> Female
+            <input type="radio" id="other" name="sex" value="unknown"> Unknown<br><br>
+            
+            <label>Siblings/Spouses : </label>
+            <input type="number" name="sb" min="0"><br><br>
+            
+            <label>Parents/Childrens : </label> 
+            <input type="number" name="parch" min="0"><br><br>
+            
+            <label>Embarked : </label>
+            <select name="Embarked">
+                <option>Cherbourg</option>
+                <option>Queenstown</option>
+                <option>Southampton</option>
+                <option>Unknown</option>
+            </select><br><br>
+                
+            <button type="Submit"> Predict </button><br><br><br><br>
+            
+        </form>
+        </div>
+<br>
+<center>
+
+</body>    
+</html>
+
