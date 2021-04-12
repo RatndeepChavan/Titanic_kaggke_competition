@@ -111,7 +111,7 @@ def predict():
     else:
         txt = f'Bad News'
         txt2= f'Passenger {val[0]} {name}, age-{age}'
-        txt3= f'Traveling in {val[4]} class and Embarked at {val[9]} didn't Survived.'
+        txt3= f"Traveling in {val[4]} class and Embarked at {val[9]} did't Survived."
         txt4= f'RIP {val[0]} {name}'
         return render_template('not-survived.html', txt=txt, txt2=txt2, txt3=txt3, txt4=txt4)
     
